@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 const Desktop1 = ({onClickShowCharacters}) => {
 
-
     return (
         <>
             <h1>Torneio Tribruxo</h1>

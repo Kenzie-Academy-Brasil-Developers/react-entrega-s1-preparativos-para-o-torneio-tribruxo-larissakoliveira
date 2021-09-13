@@ -15,5 +15,3 @@ const CardsCharacters = ({ image, name, house }) => {
 }
 
 export default CardsCharacters
-
-

@@ -1,18 +1,11 @@
 import CardsCharacters from '../CardsCharacters'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Desktop1 from '../Desktop1'
 
 const Characters = ({ characters }) => {
 
     const [show, setShow] = useState(true)
     const [threeCharacters, setThreeCharacters] = useState([])
-
-    useEffect(() => {
-        fetch('http://hp-api.herokuapp.com/api/characters/students')
-            .then((response) => response.json())
-            .then((response) => setThreeCharacters(response))
-            .catch((err) => console.log(err))
-    }, [])
 
     function getRandomIntInclusive(min, max) {
         min = Math.ceil(min);
@@ -36,7 +29,7 @@ const Characters = ({ characters }) => {
         setShow(!show)
     }
 
-    const onClickShowCharacters = () => {
+    const startShowCharacters = () => {
         showDesktop2() 
         randomCharacters()
     }
@@ -44,7 +37,7 @@ const Characters = ({ characters }) => {
     return (
         show ?
         <div>
-            <Desktop1 onClickShowCharacters={onClickShowCharacters}/>
+            <Desktop1 startShowCharacters={startShowCharacters}/>
         </div>
         :
         <div className='containerCharacters'>

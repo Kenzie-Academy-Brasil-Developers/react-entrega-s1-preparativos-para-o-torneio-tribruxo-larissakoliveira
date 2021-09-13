@@ -9,6 +9,7 @@
 img{
     height: 200px;
     width: 160px;
+    border-radius: 10px;
 }
 
 .allCharacters{
